@@ -20,5 +20,12 @@ from . import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.index, name="index"),
-    path("about", views.about, name="about"),
+    # path("about", views.about, name="about"),
+    # path("link", views.link, name="link"),
+    # project based routes
+    path("capfirst", views.capFirst, name="capFirst"),
+    path("removepunc", views.removePunc, name="removePunch"),
+    path("newlineremove", views.newlineremove, name="newlineremove"),
+    path("spaceremove", views.spaceremove, name="spaceremove"),
+    path("charcount", views.charcount, name="charcount"),
 ]
