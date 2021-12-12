@@ -2,9 +2,15 @@
 from django import http
 from django.http import HttpResponse
 
+# imports
+from django.shortcuts import render
 
+# def index(req):
+#     return HttpResponse("hello world")
+
+# html page
 def index(req):
-    return HttpResponse("hello world")
+    return render(req, "index.html")
 
 
 # def about(req):
@@ -13,6 +19,9 @@ def index(req):
 
 # def link(req):
 #     return HttpResponse("<a href=https://www.amazon.in>amazon</a>")
+
+
+# project
 
 # PIPELINE FOR OUR TEXTUIILS PROJECT
 
