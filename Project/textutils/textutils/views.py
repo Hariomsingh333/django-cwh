@@ -3,7 +3,7 @@ from django import http
 from django.http import HttpResponse
 
 # imports
-from django.shortcuts import render
+from django.shortcuts import render, resolve_url
 
 # def index(req):
 #     return HttpResponse("hello world")
@@ -11,6 +11,10 @@ from django.shortcuts import render
 # html page
 def index(req):
     return render(req, "index.html")
+
+
+def about(req):
+    return render(req, "about.html")
 
 
 # def about(req):
@@ -32,7 +36,10 @@ def capFirst(req):
 
 # remove punch
 def removePunc(req):
-    return HttpResponse("removePunch page")
+    # get the text from home
+    djText = req.GET.get("text", "default")
+    # show the text value
+    return HttpResponse(djText)
 
 
 # newline remove

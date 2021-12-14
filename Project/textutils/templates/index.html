@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>this is home</h1>
-  </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<h1>Home</h1>
+<h4>enter your text here:
+</h4>
+<form action="">
+  <textarea name="text" id="text" cols="70" rows="10"></textarea>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}
